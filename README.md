@@ -28,6 +28,7 @@ A personal website is website that represents you , your work , your career , yo
 - Strive to make the user journey intuitive and complete.
 - At least 4 pages.
 - At least 2 models.
+- Must be responsive (looks good on big & small screens). 
 - You can use a CSS library to style your website (such as Bootstrap or equivalent)
 - You can use a cdn or a cloud storage to host large files such as large videos (example: Goolge Firebase Cloud Storage: https://firebase.google.com/docs/storage)
 - User Stories(shared as a link to document or added as a file).
