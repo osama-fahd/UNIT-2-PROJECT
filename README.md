@@ -23,7 +23,6 @@ A personal website is website that represents you , your work , your career , yo
 - Use Templates & Template Inheritance.
 - Organize your project in apps as needed.
 - Use models to represent you data.
-- User Authentication & Authorization (register, login, logout, Limit access to some pages using permissions , etc.)
 - Use naming conventions.
 - Strive to make the user journey intuitive and complete.
 - At least 4 pages.
