@@ -1,0 +1,226 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+
+    /* margin-left: 3rem;
+    margin-right:3rem; */
+    background-color: #fdffcd;
+}
+
+.phudu {
+    font-family: "Phudu", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 1.5rem;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    color: #2F3C7E;
+
+    margin-left: 3rem;
+    margin-right:3rem;
+}
+nav h2 {
+    font-size: 35px;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+    margin-right: 6rem;
+    font-size: 18px;
+}
+
+nav div a {
+    text-decoration: none;
+    color: #2F3C7E;
+}
+
+nav div button {
+    background-color:#2F3C7E;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    flex-grow: 1;
+}
+
+footer {
+    height: 60px;
+    background-color: #fdffcd;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main_home {
+    display: flex;
+    flex-direction: column;
+    /* align-items: first baseline; */
+    /* flex-grow: 1; */
+    margin-top:9rem;
+    width: 100%;
+    color: #2F3C7E;
+    /* background-color: #EDF4F2; */
+    /* text-align: center; */
+}
+
+.main_home h2 {
+    text-shadow: 0.5px 0.5px;
+}
+
+.faculty_glyphic {
+    font-family: "Faculty Glyphic", serif;
+    font-weight: 500;
+    font-size: 25px;
+    font-style: normal;
+  }
+
+.faculty_glyphic h1{
+    font-weight: 1000;
+    font-size: 100px;
+}  
+
+.faculty_glyphic h2{
+    font-weight: 1000;
+    font-size: 45px;
+    /* color: #3f50a7; */
+}  
+
+.faculty_glyphic_h2_title{
+    font-weight: 1000;
+    font-size: 40px;
+    /* color: #3f50a7; */
+}  
+
+  .side_margins {
+    margin-left: 3rem;
+    margin-right:3rem;
+  }
+
+  .r_margin {
+    margin-right:3rem;
+  }
+
+  .l_margin {
+    margin-left: 3rem;
+    
+  }
+
+  .img-fluid {
+    width: 100%; 
+    /* height: auto;  */
+}
+
+.text-content {
+    padding: 1rem; 
+    display: flex;
+    align-items: center; 
+    text-align: center;
+}
+
+.text-content p {
+    line-height: 2; 
+}
+
+.image-content {
+    padding: 1rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.image-content img {
+    max-height: 100%; 
+    height: auto; 
+    /* width: auto;  */
+    min-height: 300px; 
+    object-fit: cover;
+    /* border-radius: 15px;  */
+}
+
+.line {
+    width: 75%; 
+    height: 2px; 
+    background-color: #2F3C7E; 
+    margin: 20px 0;
+}
+
+.background_c {
+    background-color: #fcffba;
+}
+
+.background_c2 {
+    background-color: #feffd7;
+}
+
+.home_content {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.home_section {
+    margin: 0 auto;
+    padding: 20px;
+    width: 75%;
+    border-radius: 90px;
+    background-color: #fbffb8;
+}
+
+@media (max-width: 992px) {
+
+    .faculty_glyphic {
+        font-family: "Faculty Glyphic", serif;
+        font-weight: 500;
+        font-size: 29px;
+        font-style: normal;
+      }
+
+    .d-flex {
+        flex-direction: column; 
+    }
+
+    .text-content {
+        text-align: center; 
+    }
+
+    .image-content img{
+        width: 70%;
+    }
+
+    .line {
+        width: 95%; 
+    }
+}
+
