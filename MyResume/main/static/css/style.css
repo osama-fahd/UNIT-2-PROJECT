@@ -112,17 +112,20 @@ footer section {
     font-size: 100px;
 }  
 
-.faculty_glyphic h2{
-    font-weight: 1000;
-    font-size: 45px;
-    /* color: #3f50a7; */
-}  
-
 .faculty_glyphic_h2_title{
     font-weight: 1000;
-    font-size: 40px;
-    /* color: #3f50a7; */
+    font-size: 45px;
 }  
+
+.faculty_glyphic_h2_subtitle {
+    font-weight: 1000;
+    font-size: 35px;
+}
+
+.faculty_glyphic_h3_subtitle {
+    font-weight: 600;
+    font-size: 25px;
+}
 
   .side_margins {
     margin-left: 3rem;
@@ -130,7 +133,7 @@ footer section {
   }
 
   .r_margin {
-    margin-right:3rem;
+    margin-right:5rem;
   }
 
   .l_margin {
@@ -196,6 +199,15 @@ footer section {
     width: 75%;
     border-radius: 90px;
     background-color: #fbffb8;
+}
+
+.university_section {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    /* border-radius: 90px; */
+    background-image: url("/static/images/university.png");
+
 }
 
 @media (max-width: 992px) {
