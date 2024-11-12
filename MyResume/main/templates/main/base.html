@@ -23,13 +23,14 @@
 </head>
 <body>
     <nav>
-        <h2 class="m-0 phudu">osama</h2>
+        <h1 class="m-0 text_shadow">OSAMA</h1>
         <div>
-            <a class="m-0 phudu" href="{%url 'main:home_view'%}">About Me</a>
-            <a class="m-0 phudu" href="">Projects</a>
-            <a class="m-0 phudu" href="">Events</a>
-            <a class="m-0 phudu" href="">Hobbies</a>
-            <a class="m-0 phudu" href="{%url 'main:contact_view'%}">Contact Me</a>
+            <a class="m-0" href="{%url 'main:home_view' %}">About Me</a>
+            <a class="m-0" href="{%url 'resume:education_view' %}">Education</a>
+            <a class="m-0" href="{% url 'resume:projects_view' %}">Projects</a>
+            <a class="m-0" href="">Events</a>
+            <a class="m-0" href="">Hobbies</a>
+            <a class="m-0" href="{%url 'main:contact_view' %}">Contact Me</a>
             <!-- <a href="">
                 <button>Add Project</button>
             </a> -->

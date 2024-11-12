@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Osama's Projects {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="main_projects faculty_glyphic">
+    <div class="projects_title col-lg-12"></div>
+    <div class="d-flex flex-column justify-content-center align-items-center mt-5 gap-5">
+        <div class="d-flex flex-column justify-content-start align-items-start col-8">
+            <h2 class="faculty_glyphic_h1_title text_shadow">My Projects</h2>
+        </div>
+        <div style="width: 70%">
+            <div class="project d-flex flex-column justify-content-start shadow-lg rounded-5">
+                <img class="rounded-top-5" src="{% static 'images/various_dates.jpg' %}" />
+                <div class="p-5">
+                    <h3 class="faculty_glyphic_h2_subtitle mb-4">Saudi Date Fruit Image Classification</h3>
+                    <p class="">
+                        There are many date fruit types in Saudi Arabia.
+                         Therefor,
+                         I used the Convolutional Neural Network (CNN) model to tackle this problem.
+                          the dataset consists of data fruit images corresponding to 9 types of fruit dates the following:
+                           Ajwa, Galaxy, Medjool, Meneifi, NabtatAli, Rutab, Shaishe, Sokari, and Sugaey.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="width: 70%">
+            <div class="project d-flex flex-column justify-content-start shadow-lg rounded-5">
+                <img class="rounded-top-5" src="{% static 'images/various_dates.jpg' %}" />
+                <div class="p-5">
+                    <h3 class="faculty_glyphic_h2_subtitle mb-4">Saudi Date Fruit Image Classification</h3>
+                    <p class="">
+                        There are many date fruit types in Saudi Arabia.
+                         Therefor,
+                         I used the Convolutional Neural Network (CNN) model to tackle this problem.
+                          the dataset consists of data fruit images corresponding to 9 types of fruit dates the following:
+                           Ajwa, Galaxy, Medjool, Meneifi, NabtatAli, Rutab, Shaishe, Sokari, and Sugaey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
