@@ -68,7 +68,7 @@ nav div button {
 main {
     display: flex;
     justify-content: center;
-    align-items: first baseline;
+    align-items: baseline;
     flex-grow: 1;
 }
 
@@ -104,6 +104,16 @@ footer section {
     justify-content: center;
     align-items: center;
     margin-top:9rem;
+    width: 100%;
+}
+
+.main_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:9rem;
+    /* background-color: #ffedab; */
     width: 100%;
 }
 
@@ -236,7 +246,7 @@ footer section {
     /* background-color: #fbff92; */
 }
 
-.projects_title {
+.projects_header {
     margin: 0;
     /* padding: 20px; */
     width: 100%;
@@ -244,6 +254,11 @@ footer section {
     background-image: url("/static/images/AI_m3.png");
     background-repeat: repeat-x;
 }
+
+/* .projects_title {
+    background-image: url("/static/images/title_back.png");
+    padding: 40px;
+} */
 
 .project {
     background-color: #668ba4;
