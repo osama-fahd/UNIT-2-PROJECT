@@ -92,7 +92,7 @@ def update_project_view(request: HttpRequest, project_id:int):
         if "image" in request.FILES: project.image = request.FILES["image"]
         project.save()
         
-        return redirect("dashboard:project_view", project_id=project_id)
+        return redirect("dashboard:project_view")
     
     return render(request, "dashboard/update_project.html", {"project": project})
 
@@ -105,7 +105,7 @@ def update_interest_view(request: HttpRequest, interest_id:int):
         if "image" in request.FILES: interest.image = request.FILES["image"]
         interest.save()
         
-        return redirect("dashboard:interest_view", interest_id=interest_id)
+        return redirect("dashboard:interest_view")
     
     return render(request, "dashboard/update_interest.html", {"interest": interest})
 
@@ -119,7 +119,7 @@ def update_course_view(request: HttpRequest, course_id:int):
         if "image" in request.FILES: course.image = request.FILES["image"]
         course.save()
         
-        return redirect("dashboard:course_view", course_id=course_id)
+        return redirect("dashboard:course_view")
     
     return render(request, "dashboard/update_course.html", {"course": course})
 

@@ -4,7 +4,7 @@ from dashboard.models import Project, Interest, Course
 class ProjectForm(forms.ModelForm):
     class Meta:
         model = Project
-        fields = ['title', 'about', 'description', 'image']
+        fields = ['title', 'about', 'description', 'detail', 'result', 'image']
         
 
 class InterestForm(forms.ModelForm):
