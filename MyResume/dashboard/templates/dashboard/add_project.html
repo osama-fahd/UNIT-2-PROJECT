@@ -1,0 +1,37 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %} Add Project {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="main_add">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-lg-8">
+                <div class="d-flex flex-column justify-content-start align-items-start mb-3">
+                    <h3 class="faculty_glyphic_bold">ADD New Project</h3>
+                </div>
+                <form class="d-flex flex-column" action="{% url 'dashboard:add_project_view' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h4>Project Title</h4>
+                    <input type="text" name="title" placeholder="Title" class="form-control" required/>
+                    
+                    <h4 class="mt-4">About The Project</h4>
+                    <textarea name="about" class="form-control" required style="height: 80px;"> </textarea>
+
+                    <h4 class="mt-4">Description Of The Project</h4>
+                    <textarea name="description" class="form-control" required style="height: 150px;"> </textarea>
+
+                    <h4 class="mt-4">A Poster Image</h4>
+                    <input type="file" name="image" class="form-control" required accept="image/*"/>
+
+                    <input class="mt-4 form-control" type="submit" value="Submit" class="btn" style="background-color: #2F3C7E; color: white"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

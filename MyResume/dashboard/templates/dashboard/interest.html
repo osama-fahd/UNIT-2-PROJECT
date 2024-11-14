@@ -1,0 +1,53 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %} Interests {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="mb-5 header">
+    <h2 class="faculty_glyphic_bold">Manage Interests</h2>
+
+</div>
+
+<a href="{% url 'dashboard:add_interest_view' %}">
+    <button class="mt-5 btn btn-primary">Add Interest</button>
+</a>
+
+<div class="mt-2 table-container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Created At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for interest in interests %}
+                <tr>
+                    <td>
+                        <img src="{{ interest.image.url }}" class="img"/>
+                    </td>
+                    <td>{{interest.title}} </td>
+                    <td>{{interest.description}} </td>
+                    <td>{{interest.created_at}} </td>
+                    <td>
+                        <a href="{% url 'dashboard:update_interest_view' interest.id %}">
+                            <button class="btn btn-info btn-sm">Update</button>
+                        </a>
+                        <a href="{% url 'dashboard:delete_interest_view' interest.id %}" class="btn btn-danger" 
+                        onclick="return confirm('Are you sure you want to delete interest {{ interest.title }}?');">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

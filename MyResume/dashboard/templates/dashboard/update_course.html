@@ -1,6 +1,6 @@
 {% extends 'dashboard/base.html' %}
 
-{% block title %} Update Interest {% endblock %}
+{% block title %} Update Course {% endblock %}
 
 {% block content %}
 
@@ -11,21 +11,26 @@
         <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-lg-8">
                 <div class="d-flex flex-column justify-content-start align-items-start mb-3">
-                    <h3 class="faculty_glyphic_bold">Update {{interest.title}}</h3>
+                    <h3 class="faculty_glyphic_bold">Update {{course.title}}</h3>
                 </div>
-                <form class="d-flex flex-column" action="{% url 'dashboard:update_interest_view' %}" method="post" enctype="multipart/form-data">
+                <form class="d-flex flex-column" action="{% url 'dashboard:update_course_view' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <h4>Interest Title</h4>
-                    <input type="text" name="title" placeholder="Title" class="form-control" value="{{interest.title}}" required/>
+                    <h4>course Title</h4>
+                    <input type="text" name="title" placeholder="Title" class="form-control" value="{{course.title}}" required/>
                     
-                    <h4 class="mt-4">Description Of The Interest</h4>
+                    <h4 class="mt-4">About The Course</h4>
+                    <textarea name="about" class="form-control" required style="height: 80px;">
+                         {{course.about}}
+                    </textarea>
+
+                    <h4 class="mt-4">Description Of The Course</h4>
                     <textarea name="description" class="form-control" required style="height: 150px;">
-                        {{interest.description}}   
+                        {{course.description}}   
                     </textarea>
 
                     <div class="row">
                         <div class="col-3">
-                            <img src="{{interest.image.url}}" class="w-100" />
+                            <img src="{{course.image.url}}" class="w-100" />
                         </div>
                         <div class="col">
                             <h4 class="mt-4">A Poster Image</h4>

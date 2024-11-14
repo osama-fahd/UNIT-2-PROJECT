@@ -1,0 +1,55 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %} Projects {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="mb-5 header">
+    <h2 class="faculty_glyphic_bold">Manage Projects</h2>
+
+</div>
+
+<a href="{% url 'dashboard:add_project_view' %}">
+    <button class="mt-5 btn btn-primary">Add Project</button>
+</a>
+
+<div class="mt-2 table-container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>About</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+                <tr>
+                    <td>
+                        <img src="{{ project.image.url }}" class="img">
+                    </td>
+                    <td>{{project.title}} </td>
+                    <td>{{project.about}} </td>
+                    <td>{{project.description}} </td>
+                    <td>{{project.created_at}} </td>
+                    <td>
+                        <a href="{% url 'dashboard:update_project_view' project.id %}">
+                            <button class="btn btn-info btn-sm">Update</button>
+                        </a>
+                        <a href="{% url 'dashboard:delete_project_view' project.id %}" class="btn btn-danger" 
+                        onclick="return confirm('Are you sure you want to delete project {{ project.title }}?');">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
