@@ -11,8 +11,12 @@ body {
 
     /* margin-left: 3rem;
     margin-right:3rem; */
-    background-color: #faff678e;
-    color: #2F3C7E;
+    /* background-color: #faff678e; */
+    /* color: #2F3C7E; */
+    /* background-color:tan; */
+    /* color: rgb(90, 68, 39); */
+    background-color: #EDF4F2;
+    color: #31473A;
 }
 
 .phudu {
@@ -37,8 +41,8 @@ nav {
     margin-right:3rem;
 }
 nav h1 {
-    font-weight: 1000;
-    font-size: 37px;
+    font-weight: 800;
+    font-size: 35px;
 }
 
 nav div {
@@ -54,12 +58,14 @@ nav div {
 
 nav div a {
     text-decoration: none;
-    color: #2F3C7E;
+    /* color: #2F3C7E; */
     font-size: 20px;
+    color: #31473A;
+
 }
 
 nav div button {
-    background-color:#2F3C7E;
+    background-color:#31473A;
     color: white;
     padding: 10px 15px;
     border-radius: 10px;
@@ -122,10 +128,14 @@ footer section {
 }
 
 .faculty_glyphic {
-    font-family: "Faculty Glyphic", serif;
     font-weight: 500;
     font-size: 25px;
-    font-style: normal;
+}
+
+.faculty_glyphic_home {
+    font-weight: 500;
+    font-size: 30px;
+    /* text-shadow: 0.5px 0.5px; */
 }
 
 .faculty_glyphic_h1{
@@ -202,24 +212,29 @@ footer section {
 .line {
     width: 75%; 
     height: 2px; 
-    background-color: #2F3C7E; 
+    background-color: #31473A; 
     margin: 20px 0;
 }
 
 .background_c {
-    background-color: #fcffba;
+    /* background-color: #d6dcdb; */
+    background-color: #EDF4F2;
 }
 
 .background_c2 {
-    background-color: #ffedab;
+    background-color: #6f8b7a9a;
 }
+/* 
+.background_c2 .line {
+    background-color: #EDF4F2; 
+} */
 
 .background_c3 {
-    background-color: #ffedab;
+    background-color: #6f8b7a9a;
 }
 
 .background_c4 {
-    background-color: #fcffba;
+    background-color: #95a4a0a2;
 }
 
 .home_content {
@@ -232,7 +247,7 @@ footer section {
     padding: 20px;
     width: 75%;
     border-radius: 90px;
-    background-color: #fbffb8;
+    background-color: #31473A;
 }
 
 .university_section {
@@ -260,26 +275,45 @@ footer section {
     padding: 40px;
 } */
 
-.project {
-    background-color: #668ba4;
+.project_background_c1 {
+    background-color: #6f8b7a9a;
+}
+
+.project_background_c2 {
+    background-color: #95a4a0a2;
 }
 
 .project img {
     width: 100%;
 }
 
-.project p {
-    color: #fcffba;
-}
 
 @media (max-width: 992px) {
 
-    .faculty_glyphic {
-        font-family: "Faculty Glyphic", serif;
-        font-weight: 500;
-        font-size: 29px;
-        font-style: normal;
-      }
+    .faculty_glyphic_h1 {
+        font-size: 90px;
+    }
+
+    nav h1 {
+        font-size: 25px;
+    }
+
+    nav div {
+        gap: 1;
+        margin-right: 3rem;
+    }
+
+    nav {
+        margin-left: 1rem;
+    }
+
+    nav div a {
+        font-size: 15px;
+    }
+
+    .faculty_glyphic_home, .faculty_glyphic {
+        font-size: 25px;
+    }
 
     .d-flex {
         flex-direction: column; 

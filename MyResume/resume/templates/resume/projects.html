@@ -13,39 +13,25 @@
     </div> -->
     <div class="d-flex flex-column justify-content-center align-items-center gap-5">
         <div class="d-flex flex-column justify-content-start align-items-start col-lg-8">
-            <h2 class="faculty_glyphic_h1_title text_shadow">My Projects</h2>
-        </div>
-        <div style="width: 70%">
-            <div class="project d-flex flex-column justify-content-start shadow-lg rounded-5">
-                <img class="rounded-top-5" src="{% static 'images/various_dates.jpg' %}" />
-                <div class="p-5">
-                    <h3 class="faculty_glyphic_h2_subtitle mb-4">Saudi Date Fruit Image Classification</h3>
-                    <p class="">
-                        There are many date fruit types in Saudi Arabia.
-                         Therefor,
-                         I used the Convolutional Neural Network (CNN) model to tackle this problem.
-                          the dataset consists of data fruit images corresponding to 9 types of fruit dates the following:
-                           Ajwa, Galaxy, Medjool, Meneifi, NabtatAli, Rutab, Shaishe, Sokari, and Sugaey.
-                    </p>
-                </div>
-            </div>
+            <!-- <h2 class="faculty_glyphic_h1_title text_shadow">My Projects</h2> -->
         </div>
 
-        <div style="width: 70%">
-            <div class="project d-flex flex-column justify-content-start shadow-lg rounded-5">
-                <img class="rounded-top-5" src="{% static 'images/various_dates.jpg' %}" />
-                <div class="p-5">
-                    <h3 class="faculty_glyphic_h2_subtitle mb-4">Saudi Date Fruit Image Classification</h3>
-                    <p class="">
-                        There are many date fruit types in Saudi Arabia.
-                         Therefor,
-                         I used the Convolutional Neural Network (CNN) model to tackle this problem.
-                          the dataset consists of data fruit images corresponding to 9 types of fruit dates the following:
-                           Ajwa, Galaxy, Medjool, Meneifi, NabtatAli, Rutab, Shaishe, Sokari, and Sugaey.
-                    </p>
+        {% for project in projects %}
+            <div class="col-9 col-lg-7">
+                <div class="project d-flex flex-column justify-content-start shadow-lg rounded-5 {% if project.id|divisibleby:2 %} project_background_c1 {% else %} project_background_c2 {% endif %}">
+                    <img class="rounded-top-5" src="{{ project.image.url }}" style="max-width: 100%; max-height: 750px; height: auto; object-fit: cover;" />
+                    <div class="p-5">
+                        <h3 class="faculty_glyphic_h2_subtitle mb-4">
+                            {{project.title}}
+                        </h3>
+                        <p class="">
+                            {{project.about}}
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endfor %}
+
     </div>
 </div>
 

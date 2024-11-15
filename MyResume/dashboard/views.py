@@ -76,9 +76,9 @@ def add_course_view(request: HttpRequest):
         course_form = CourseForm(request.POST, request.FILES)
         if course_form.is_valid():
             course_form.save()
-            return redirect('dashboard:course_view')
+            return redirect('dashboard:course_view', {"categories": Course.Category.choices})
         
-    return render(request, "dashboard/add_course.html")
+    return render(request, "dashboard/add_course.html", {"categories": Course.Category.choices})
 
 
 
@@ -121,7 +121,7 @@ def update_course_view(request: HttpRequest, course_id:int):
         
         return redirect("dashboard:course_view")
     
-    return render(request, "dashboard/update_course.html", {"course": course})
+    return render(request, "dashboard/update_course.html", {"course": course, "categories": Course.Category.choices})
 
 
 

@@ -28,14 +28,13 @@
             <a class="m-0" href="{%url 'main:home_view' %}">About Me</a>
             <a class="m-0" href="{%url 'resume:education_view' %}">Education</a>
             <a class="m-0" href="{% url 'resume:projects_view' %}">Projects</a>
-            <a class="m-0" href="">Events</a>
-            <a class="m-0" href="">Hobbies</a>
+            <a class="m-0" href="{% url 'resume:events_view' %}">Events</a>
+            <!-- <a class="m-0" href="">Hobbies</a> -->
             <a class="m-0" href="{%url 'main:contact_view' %}">Contact Me</a>
             
-            <a href="{% url 'dashboard:dashboard_view' %}">
-                <button>Dashboard</button>
-            </a>
-            
+            <!-- <a href="{% url 'dashboard:dashboard_view' %}">
+                Dashboard
+            </a> -->
         </div>
     </nav>
 

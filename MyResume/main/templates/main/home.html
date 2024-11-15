@@ -6,7 +6,7 @@
 
 {% load static %}
 
-<div class="main_home faculty_glyphic ">
+<div class="main_home faculty_glyphic_home ">
     <div class="d-flex flex-column align-items-center mb-5">
         <h1 class="faculty_glyphic_h1 text_shadow">Hi There!</h1>
         <h1 class="faculty_glyphic_h1 text_shadow">I Am Osama</h1>
@@ -15,7 +15,7 @@
     {% for interest in interests %}
         <div class="home_content d-flex flex-column justify-content-center align-items-center 
         {% if interest.id|divisibleby:2 %} background_c {% else %} background_c2 {% endif %}">
-            <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-5">
+            <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-2 gap-lg-5">
                 <div class="text-content col-12 col-lg-5">
                     <p class="">
                         {{interest.description}}
