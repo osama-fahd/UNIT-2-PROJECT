@@ -8,8 +8,12 @@ from main.models import Contact
 
 
 def dashboard_view(request: HttpRequest):
+    projects = Project.objects.all()
+    interests = Interest.objects.all()
+    courses = Course.objects.all()
+    messages = Contact.objects.all()
     
-    return render(request, "dashboard/dashboard.html")
+    return render(request, "dashboard/dashboard.html", {"projects": projects, "interests": interests, "courses": courses, "messages": messages})
 
 def search_view(request: HttpRequest):
     
@@ -56,7 +60,7 @@ def add_project_view(request: HttpRequest):
             project_form.save()
             return redirect('dashboard:project_view')
         
-    return render(request, "dashboard/add_project.html")
+    return render(request, "dashboard/add_project.html", {"categories": Project.Category.choices})
 
 def add_interest_view(request: HttpRequest):
     interest_form = InterestForm()
@@ -76,7 +80,7 @@ def add_course_view(request: HttpRequest):
         course_form = CourseForm(request.POST, request.FILES)
         if course_form.is_valid():
             course_form.save()
-            return redirect('dashboard:course_view', {"categories": Course.Category.choices})
+            return redirect('dashboard:course_view')
         
     return render(request, "dashboard/add_course.html", {"categories": Course.Category.choices})
 
@@ -89,12 +93,18 @@ def update_project_view(request: HttpRequest, project_id:int):
         project.title = request.POST["title"]
         project.about = request.POST["about"]
         project.description = request.POST['description']
+        project.section1 = request.POST['section1']
+        project.section2 = request.POST['section2']
+        project.section3 = request.POST['section3']
+        project.section4 = request.POST['section4']
+        project.skills = request.POST['skills']
         if "image" in request.FILES: project.image = request.FILES["image"]
+        if "category" in request.POST: project.category = request.POST["category"]
         project.save()
         
         return redirect("dashboard:project_view")
     
-    return render(request, "dashboard/update_project.html", {"project": project})
+    return render(request, "dashboard/update_project.html", {"project": project, "categories": Project.Category.choices})
 
 def update_interest_view(request: HttpRequest, interest_id:int):
     interest = Interest.objects.get(pk=interest_id)
@@ -116,7 +126,13 @@ def update_course_view(request: HttpRequest, course_id:int):
         course.title = request.POST["title"]
         course.about = request.POST["about"]
         course.description = request.POST['description']
+        course.section1 = request.POST['section1']
+        course.section2 = request.POST['section2']
+        course.section3 = request.POST['section3']
+        course.section4 = request.POST['section4']
+        course.skills = request.POST['skills']
         if "image" in request.FILES: course.image = request.FILES["image"]
+        if "category" in request.POST: course.category = request.POST["category"]
         course.save()
         
         return redirect("dashboard:course_view")

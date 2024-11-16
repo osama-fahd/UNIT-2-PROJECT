@@ -37,9 +37,9 @@
                     <td>{{interest.created_at}} </td>
                     <td>
                         <a href="{% url 'dashboard:update_interest_view' interest.id %}">
-                            <button class="btn btn-info btn-sm">Update</button>
+                            <button class="mb-2 btn btn-info btn-sm">Update</button>
                         </a>
-                        <a href="{% url 'dashboard:delete_interest_view' interest.id %}" class="btn btn-danger" 
+                        <a href="{% url 'dashboard:delete_interest_view' interest.id %}" class="btn btn-danger btn-sm" 
                         onclick="return confirm('Are you sure you want to delete interest {{ interest.title }}?');">
                             Delete
                         </a>

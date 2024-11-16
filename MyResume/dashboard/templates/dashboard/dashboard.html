@@ -6,6 +6,125 @@
 
 {% load static %}
 
+<div class="mb-5 header">
+    <h2 class="faculty_glyphic_bold">Website Dashboard</h2>
+</div>
 
+<div class="table-container">
+    <a class="" href="{% url 'dashboard:project_view' %}">
+        <button class="btn btn-info">Browse Projects</button>
+    </a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>About</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+                <tr>
+                    <td>
+                        <img src="{{ project.image.url }}" class="img">
+                    </td>
+                    <td>{{project.title}} </td>
+                    <td>{{project.get_category_display}} </td>
+                    <td>{{project.about}} </td>
+                    <td>{{project.created_at}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="mt-5 table-container">
+    <a href="{% url 'dashboard:interest_view' %}">
+        <button class="btn btn-info">Browse Interests</button>
+    </a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for interest in interests %}
+                <tr>
+                    <td>
+                        <img src="{{ interest.image.url }}" class="img"/>
+                    </td>
+                    <td>{{interest.title}} </td>
+                    <td>{{interest.description}} </td>
+                    <td>{{interest.created_at}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+<div class="mt-5 table-container">
+    <a href="{% url 'dashboard:course_view' %}">
+        <button class="btn btn-info">Browse Courses</button>
+    </a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>About</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+                <tr>
+                    <td>
+                        <img src="{{ course.image.url }}" class="img">
+                    </td>
+                    <td>{{course.title}} </td>
+                    <td>{{course.get_category_display}} </td>
+                    <td>{{course.about}} </td>
+                    <td>{{course.created_at}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+ 
+<div class="mt-5 mb-5 table-container">
+    <a href="{% url 'dashboard:contact_messages_view' %}">
+        <button class="mb-2 btn btn-info">Check Messages</button>
+    </a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Created At</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for message in messages %}
+                <tr>
+                    <td>{{message.first_name}} </td>
+                    <td>{{message.last_name}} </td>
+                    <td>{{message.email}} </td>
+                    <td>{{message.message}} </td>
+                    <td>{{message.created_at}} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 {% endblock %}

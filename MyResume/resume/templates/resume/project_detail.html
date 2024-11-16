@@ -1,0 +1,92 @@
+{% extends 'main/base.html' %}
+
+{% block title %} {{project.title}} {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="main_projects">
+    <div class="projects_header col-lg-12 mb-4"></div>
+
+    <div class="d-flex flex-column justify-content-center align-items-center ">
+        <div class="detail detail_project d-flex flex-column justify-content-lg-start align-items-lg-start col-10 col-lg-10 gap-sm-4">
+            <h2 class="faculty_glyphic_h2 text_shadow">{{project.title}} Project</h2>
+        
+            {% if project.get_category_display == 'AI' %}
+                <div class=" d-flex flex-column flex-md-column flex-lg-row mt-5 justify-content-center align-items-sm-center justify-content-lg-between align-items-lg-start col-sm-12 gap-sm-5">
+                    <img class="col-lg-5 rounded-3 align-self-center" src="{{ project.image.url }}" />
+                    <div class="p-2 col-12 col-lg-7 d-flex flex-column ">
+                        <h3 class="faculty_glyphic_h3_title mb-4">
+                            Project Description
+                        </h3>
+                        <p>
+                            {{project.description}}
+                        </p>
+                    </div>
+                </div>
+            {% else %}
+                <div class=" d-flex flex-column mt-5 justify-content-center align-items-center justify-content-center col-sm-12 gap-3">
+                    <img class="col-lg-5 rounded-3 align-self-center img-fluid fit-contain" src="{{ project.image.url }}" />
+                    <div class="p-2 d-flex flex-column ">
+                        <h3 class="faculty_glyphic_h3_title mb-4">
+                            Project Description
+                        </h3>
+                        <p>
+                            {{project.description}}
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="mt-5 d-flex flex-column justify-content-center align-items-center background_dp pt-4 pb-4">
+            <div class="detail detail_project d-flex flex-column justify-content-lg-start align-items-lg-start col-10 col-lg-10 gap-sm-4">
+                {% if 'Default text for section 1' not in project.section1 and 'nothing' not in project.section1 %}
+                    <div class="d-flex flex-column ">
+                        <h3 class="faculty_glyphic_h3_title mb-4">
+                            Key Features
+                        </h3>
+                        <ul class="Benefits d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center justify-content-lg-between align-items-lg-baseline gap-sm-5 p-2">
+                            <li class="col-11 col-lg-5">
+                                {{project.section1}}
+                            </li>
+                            {% if project.section2 != 'Default text for section 2' and project.section2 != 'nothing' %}
+                                <li class="col-11 col-lg-6">
+                                    {{project.section2}}
+                                </li>
+                            {% endif %}
+                            {% if project.section3 != 'Default text for section 3' and project.section3 != 'nothing' %}
+                                <li class="col-11 col-lg-5">
+                                    {{project.section3}}
+                                </li>
+                            {% endif %}
+                            {% if project.section4 != 'Default text for section 4' and project.section4 != 'nothing' %}
+                                <li class="col-11 col-lg-6">
+                                    {{project.section4}}
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="mt-4 d-flex flex-column justify-content-center align-items-center">
+            <div class="detail detail_project d-flex flex-column justify-content-lg-start align-items-lg-start col-10 col-lg-10 gap-sm-4">
+                {% if 'Default skills' not in project.skills and 'nothing' not in project.skills %}
+                    <div>
+                        <h3 class="faculty_glyphic_h3_title mb-4">
+                            Skilled Gained
+                        </h3>
+                        <p>
+                            {{project.skills}}
+                        </p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

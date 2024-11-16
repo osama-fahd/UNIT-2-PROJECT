@@ -15,17 +15,18 @@
                 </div>
                 <form class="d-flex flex-column" action="{% url 'dashboard:add_course_view' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <h4>Course Title</h4>
+                    <h4>Course Title <span class="text-secondary"> (required)</h4>
                     <input type="text" name="title" placeholder="Title" class="form-control" required/>
                     
-                    <h4 class="mt-4">About The Course</h4>
+                    <h4 class="mt-4">About The Course <span class="text-secondary"> (required)</span> </h4>
                     <textarea name="about" class="form-control" required style="height: 100px;"> </textarea>
 
-                    <h4 class="mt-4">Description Of The Course</h4>
+                    <h4 class="mt-4">Description Of The Course <span class="text-secondary"> (required)</h4>
                     <textarea name="description" class="form-control" required style="height: 200px;"> </textarea>
 
+                    <h4 class="mt-4">Course Category <span class="text-secondary"> (required)</h4>
                     <select name="category" class="form-control" required>
-                        <option value="" selected>Select Course Category</option>
+                        <option value="" disabled selected>Select Course Category</option>
                         {% for value, label in categories %}
                             <option value="{{value}}">{{label}}</option>
                         {% endfor %}
@@ -44,9 +45,9 @@
                     <textarea name="section4" class="form-control" style="height: 150px;"> </textarea>
 
                     <h4 class="mt-4">Skills Gained From The Course</h4>
-                    <textarea name="skills" class="form-control" style="height: 150px;"> </textarea>
+                    <textarea name="skills" class="form-control" style="height: 80px;"> </textarea>
 
-                    <h4 class="mt-4">A Poster Image</h4>
+                    <h4 class="mt-4">A Poster Image <span class="text-secondary"> (required)</h4>
                     <input type="file" name="image" class="form-control" required accept="image/*"/>
 
                     <input class="mt-4 form-control" type="submit" value="Submit" class="btn" style="background-color: #2F3C7E; color: white"/>

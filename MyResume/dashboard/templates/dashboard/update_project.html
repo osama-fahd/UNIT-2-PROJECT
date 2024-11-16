@@ -28,6 +28,39 @@
                         {{project.description}}   
                     </textarea>
 
+                    <h4 class="mt-4">Project Category</h4>
+                    <select class="form-select" name="category">
+                        <!-- <option value="" disabled selected>Project Category</option> -->
+                        {% for value, label in categories %}
+                            <option value="{{value}}" {% if project.category == value %}selected{% endif %}>{{label}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <h4 class="mt-4">1st. Secion Of The Project</h4>
+                    <textarea name="section1" class="form-control" style="height: 150px;"> 
+                        {{project.section1}}
+                    </textarea>
+
+                    <h4 class="mt-4">2nd. Secion Of The Project</h4>
+                    <textarea name="section2" class="form-control" style="height: 150px;"> 
+                        {{project.section4}}
+                    </textarea>
+
+                    <h4 class="mt-4">3rd. Secion Of The Project</h4>
+                    <textarea name="section3" class="form-control" style="height: 150px;"> 
+                        {{project.section3}}
+                    </textarea>
+
+                    <h4 class="mt-4">4th. Secion Of The Project</h4>
+                    <textarea name="section4" class="form-control" style="height: 150px;"> 
+                        {{project.section4}}
+                    </textarea>
+
+                    <h4 class="mt-4">Skills Gained From The Project</h4>
+                    <textarea name="skills" class="form-control" style="height: 150px;"> 
+                        {{project.skills}}
+                    </textarea>
+
                     <div class="row">
                         <div class="col-3">
                             <img src="{{project.image.url}}" class="w-100" />

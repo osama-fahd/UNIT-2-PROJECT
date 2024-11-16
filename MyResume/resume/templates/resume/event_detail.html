@@ -1,0 +1,70 @@
+{% extends 'main/base.html' %}
+
+{% block title %} {{event.title}} {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="main_events">
+    <div class="projects_header col-lg-12 mb-4"></div>
+
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="detail d-flex flex-column justify-content-lg-start align-items-lg-start col-10 col-lg-10 gap-sm-4">
+            <h2 class="faculty_glyphic_h2 text_shadow">{{event.title}} </h2>
+        
+            <div class=" d-flex flex-column flex-lg-row mt-3 justify-content-center align-items-sm-center justify-content-lg-between col-sm-12 gap-sm-5">
+                <img class="col-5" src="{{ event.image.url }}" />
+                <div class="p-2 col-12 col-lg-6 d-flex flex-column">
+                    <h3 class="faculty_glyphic_h2_title mb-4">
+                        Description
+                    </h3>
+                    <p>
+                        {{event.description}}
+                    </p>
+                </div>
+            </div>
+
+            {% if event.section1 != 'Default text for section 1' and event.section1 != 'nothing' %}
+                <div class="d-flex flex-column key_benefits rounded-3">
+                    <h3 class="faculty_glyphic_h2_title mb-4">
+                        Key Benefits
+                    </h3>
+                    <ul class="Benefits d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center justify-content-lg-between align-items-lg-baseline gap-sm-5 p-2">
+                        <li class="col-11 col-lg-5">
+                            {{event.section1}}
+                        </li>
+                        {% if event.section2 != 'Default text for section 2' and event.section2 != 'nothing' %}
+                            <li class="col-11 col-lg-6">
+                                {{event.section2}}
+                            </li>
+                        {% endif %}
+                        {% if event.section3 != 'Default text for section 3' and event.section3 != 'nothing' %}
+                            <li class="col-11 col-lg-5">
+                                {{event.section3}}
+                            </li>
+                        {% endif %}
+                        {% if event.section4 != 'Default text for section 4' and event.section4 != 'nothing' %}
+                            <li class="col-11 col-lg-6">
+                                {{event.section4}}
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            {% if event.skills != 'Default skills' and event.skills != 'nothing' %}
+                <div >
+                    <h3 class="faculty_glyphic_h2_title mb-4">
+                        Skilled Gained
+                    </h3>
+                    <p>
+                        {{event.skills}}
+                    </p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

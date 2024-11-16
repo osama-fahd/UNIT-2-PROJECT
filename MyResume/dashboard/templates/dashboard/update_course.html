@@ -28,8 +28,9 @@
                         {{course.description}}   
                     </textarea>
 
+                    <h4 class="mt-4">Course Category</h4>
                     <select class="form-select" name="category">
-                        <option value="" disabled selected>Course Category</option>
+                        <!-- <option value="" disabled selected>Select Course Category</option> -->
                         {% for value, label in categories %}
                             <option value="{{value}}" {% if course.category == value %}selected{% endif %}>{{label}}</option>
                         {% endfor %}

@@ -8,17 +8,17 @@ class Project(models.Model):
         BackEnd = 'back', 'BackEnd'
         DataAnalysis = 'analysis', 'DataAnalysis'
 
-    category = models.CharField(choices=Category.choices, max_length=30)    
+    category = models.CharField(choices=Category.choices, max_length=30, default=Category.FullStack)    
     title = models.CharField(max_length=1024)
     about = models.TextField()
     image = models.ImageField(upload_to="images/")
     
     description = models.TextField()
-    section1 = models.TextField()
-    section2 = models.TextField()
-    section3 = models.TextField()
-    section4 = models.TextField()
-    skills = models.CharField(max_length=2048)
+    section1 = models.TextField(default='Default text for section 1')
+    section2 = models.TextField(default='Default text for section 2')
+    section3 = models.TextField(default='Default text for section 3')
+    section4 = models.TextField(default='Default text for section 4')
+    skills = models.TextField(default='Default skills')
 
     created_at = models.DateTimeField(auto_now=True)
     
@@ -32,17 +32,17 @@ class Course(models.Model):
         BackEnd = 'back', 'BackEnd'
         DataAnalysis = 'analysis', 'DataAnalysis'
 
-    category = models.CharField(choices=Category.choices, max_length=30)
+    category = models.CharField(choices=Category.choices, max_length=30, default=Category.FullStack)
     title = models.CharField(max_length=1024)
     about = models.TextField()
     image = models.ImageField(upload_to="images/")
     
     description = models.TextField()
-    section1 = models.TextField()
-    section2 = models.TextField()
-    section3 = models.TextField()
-    section4 = models.TextField()
-    skills = models.CharField(max_length=2048)
+    section1 = models.TextField(default='Default text for section 1')
+    section2 = models.TextField(default='Default text for section 2')
+    section3 = models.TextField(default='Default text for section 3')
+    section4 = models.TextField(default='Default text for section 4')
+    skills = models.TextField(default='Default skills')
 
     created_at = models.DateTimeField(auto_now=True)
     

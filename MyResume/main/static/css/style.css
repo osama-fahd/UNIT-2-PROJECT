@@ -16,7 +16,8 @@ body {
     /* background-color:tan; */
     /* color: rgb(90, 68, 39); */
     background-color: #EDF4F2;
-    color: #31473A;
+    /* color: #31473A; */
+    color: #375242;
 }
 
 .phudu {
@@ -57,11 +58,12 @@ nav div {
 }
 
 nav div a {
-    text-decoration: none;
-    /* color: #2F3C7E; */
     font-size: 20px;
-    color: #31473A;
+}
 
+a {
+    text-decoration: none;
+    color: #375242;
 }
 
 nav div button {
@@ -127,6 +129,10 @@ footer section {
     text-shadow: 1.5px 1.5px;
 }
 
+.text_shadow {
+    text-shadow: 1.5px 1.5px;
+}
+
 .faculty_glyphic {
     font-weight: 500;
     font-size: 25px;
@@ -163,21 +169,7 @@ footer section {
     font-size: 25px;
 }
 
-  .side_margins {
-    margin-left: 3rem;
-    margin-right:3rem;
-  }
-
-  .r_margin {
-    margin-right:5rem;
-  }
-
-  .l_margin {
-    margin-left: 3rem;
-    
-  }
-
-  .img-fluid {
+.img-fluid {
     width: 100%; 
     /* height: auto;  */
 }
@@ -222,12 +214,13 @@ footer section {
 }
 
 .background_c2 {
-    background-color: #6f8b7a9a;
+    background-color: #6f8b7a51;
 }
-/* 
-.background_c2 .line {
-    background-color: #EDF4F2; 
-} */
+
+.background_dp {
+    background-color: #6f8b7a51;
+    width: 100%;
+}
 
 .background_c3 {
     background-color: #6f8b7a9a;
@@ -279,19 +272,212 @@ footer section {
     background-color: #6f8b7a9a;
 }
 
-.project_background_c2 {
-    background-color: #95a4a0a2;
+.project_background_c1 p{
+    color: #2e4739dd;
 }
+
+.project_background_c1 h3:hover {
+    color:#5f6564;
+}
+
+.project_background_c2 {
+    /* background-color: #95a4a0a2; */
+    background-color: #6f8b7ab7;
+}
+
+.project_background_c2 p {
+    color:#31473add;
+}
+
+.project_background_c2 h3:hover {
+    color:#4a7c5f;
+}
+
+.project {
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.02); 
+}
+
 
 .project img {
     width: 100%;
+    max-height: 700px;
+    height: auto; 
+    object-fit: cover;
+}
+
+.project p {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 2;
+}
+
+.main_events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:9rem;
+    width: 100%;
+}
+
+.event_background_c1 {
+    /* background-color: #6f8b7a9a; */
+    background-color: #EDF4F2;
+}
+
+.event {
+    height: 900px; 
+    overflow: hidden;
+    border: 5px solid #375242;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* position: relative; */
+}
+
+.event:hover {
+    transform: scale(1.02); 
+    box-shadow: 8px 8px #578468;
+}
+
+.event img {
+    width: 100%;
+    height: 430px;
+    transition: transform 0.3s ease;
+    /* object-fit: contain; */
+}
+
+.event:hover img {
+    transform: scale(0.98);
+}
+
+.event p {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 2;
+}
+
+.detail {
+
+}
+
+.faculty_glyphic_h3_title{
+    font-weight: 1000;
+    font-size: 45px;
+}  
+
+.faculty_glyphic_h2 {
+    font-weight: 1000;
+    font-size: 60px;
+}
+
+.detail img {
+    /* width: auto; */
+    height: 500px;
+    transition: transform 0.5s ease;
+    /* object-fit: contain; */
+}
+
+.detail img:hover {
+    transform: scale(1.02);
+}
+
+.detail p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.detail .Benefits li{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 2;
+    text-align: justify;
+}
+
+.detail h2 {
+    transition: transform 0.3s ease;
+}
+
+.detail h3 {
+    transition: transform 0.3s ease;
+}
+
+.detail h3:hover {
+    color:#4a7c5f;
+    transform: scale(1.02);
+}
+
+.detail h2:hover {
+    color:#38624a;
+    transform: scale(1.02);
+}
+
+.Benefits {
+    margin-left: 15px;
+}
+
+.key_benefits {
+    /* overflow: hidden; */
+    border: 6px solid #375242;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 20px;
+    padding-bottom: 0;
+    background-color: #6f8b7a51;
+}
+
+.key_benefits:hover {
+    transform: scale(1.02); 
+    box-shadow: -10px -10px #578468;
+    background-color: #EDF4F2;
 }
 
 
+.detail_project {
+
+}
+
+.detail_project img {
+    height: 600px;
+    transition: transform 0.5s ease;
+    /* object-fit: contain; */
+}
+
+.project_bottom_box {
+    border: 6px solid #375242;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #EDF4F2;
+    border-radius: 13px;
+}
+
 @media (max-width: 992px) {
+
+    .event {
+        height: auto; 
+    }
+
+    .event img {
+        height: auto;
+    }
 
     .faculty_glyphic_h1 {
         font-size: 90px;
+    }
+
+    .faculty_glyphic_h2_title {
+        font-size: 35px;
+    }
+
+    .faculty_glyphic_h2 {
+        text-align: center;
+    }
+
+    .project p {
+        font-weight: 500;
+        font-size: 22px;
     }
 
     nav h1 {
@@ -329,6 +515,12 @@ footer section {
 
     .line {
         width: 95%; 
+    }
+
+    .detail img {
+        width: 100%;
+        height: auto;
+        /* object-fit: contain; */
     }
 }
 

@@ -6,24 +6,24 @@
 
 {% load static %}
 
-<div class="main_projects faculty_glyphic">
+<div class="main_projects ">
     <div class="projects_header col-lg-12"></div>
-    <!-- <div class="d-flex flex-column justify-content-center align-items-center col-8 projects_title">
-        <h2 class="faculty_glyphic_h1_title text_shadow">My Projects</h2>
-    </div> -->
+    
     <div class="d-flex flex-column justify-content-center align-items-center gap-5">
         <div class="d-flex flex-column justify-content-start align-items-start col-lg-8">
             <!-- <h2 class="faculty_glyphic_h1_title text_shadow">My Projects</h2> -->
         </div>
 
         {% for project in projects %}
-            <div class="col-9 col-lg-7">
+            <div class="col-9 col-lg-6">
                 <div class="project d-flex flex-column justify-content-start shadow-lg rounded-5 {% if project.id|divisibleby:2 %} project_background_c1 {% else %} project_background_c2 {% endif %}">
-                    <img class="rounded-top-5" src="{{ project.image.url }}" style="max-width: 100%; max-height: 750px; height: auto; object-fit: cover;" />
-                    <div class="p-5">
-                        <h3 class="faculty_glyphic_h2_subtitle mb-4">
-                            {{project.title}}
-                        </h3>
+                    <img class="rounded-top-5" src="{{ project.image.url }}"  />
+                    <div class="project_bottom_box m-4 p-3">
+                        <a class="text-decoration-none" href="{% url 'resume:project_detail_view' project.id %}">
+                            <h3 class="faculty_glyphic_h2_title mb-4">
+                                {{project.title}}
+                            </h3>
+                        </a>
                         <p class="">
                             {{project.about}}
                         </p>
@@ -31,7 +31,6 @@
                 </div>
             </div>
         {% endfor %}
-
     </div>
 </div>
 

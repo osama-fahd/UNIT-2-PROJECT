@@ -23,7 +23,9 @@
 </head>
 <body>
     <nav>
-        <h4 class="mb-3"><b>Menu</b></h4>
+        <a href="{% url 'dashboard:dashboard_view' %}">
+            <h4 class="mb-3"><b>Dashboard</b></h4>
+        </a>
         <a href="{% url 'dashboard:project_view' %}">Projects</a>
         <a href="{% url 'dashboard:interest_view' %}">Interests</a>
         <a href="{% url 'dashboard:course_view' %}">Courses</a>
