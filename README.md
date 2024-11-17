@@ -1,6 +1,6 @@
 # UNIT-2-PROJECT
 
-# UML Diagrams For Project Models
+# UML Diagrams For Projects Models
 ## Project Model
 ![image](https://github.com/user-attachments/assets/fa59dd22-de36-447a-a018-e1bcfc989fdf)
 
