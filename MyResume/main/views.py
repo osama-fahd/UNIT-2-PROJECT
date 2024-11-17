@@ -4,13 +4,14 @@ from django.http import HttpRequest, HttpResponse
 from .models import Contact
 from .forms import ContactForm
 
-from dashboard.models import Interest
+from dashboard.models import Interest, Project
 
 
 def home_view(request: HttpRequest):
     interests = Interest.objects.all()
+    projects = Project.objects.filter(category=Project.Category.AI)
     
-    return render(request, "main/home.html", {"interests": interests})
+    return render(request, "main/home.html", {"interests": interests, "projects": projects})
 
 def contact_view(request: HttpRequest):
     contact_form = ContactForm()

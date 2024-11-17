@@ -15,10 +15,6 @@ def dashboard_view(request: HttpRequest):
     
     return render(request, "dashboard/dashboard.html", {"projects": projects, "interests": interests, "courses": courses, "messages": messages})
 
-def search_view(request: HttpRequest):
-    
-    return render(request, "dashboard/search.html")
-
 
 
 def contact_messages_view(request: HttpRequest):

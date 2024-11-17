@@ -16,7 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Phudu&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Phudu&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Phudu&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Phudu&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spicy+Rice&display=swap" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
     <title>{% block title %} {% endblock %}</title>
@@ -25,16 +26,11 @@
     <nav>
         <h1 class="m-0 text_shadow">OSAMA</h1>
         <div>
-            <a class="m-0" href="{%url 'main:home_view' %}">About Me</a>
-            <a class="m-0" href="{%url 'resume:education_view' %}">Education</a>
+            <a class="m-0" href="{%url 'main:home_view' %}">Home</a>
+            <a class="m-0" href="{%url 'resume:education_view' %}">About Me</a>
             <a class="m-0" href="{% url 'resume:projects_view' %}">Projects</a>
             <a class="m-0" href="{% url 'resume:events_view' %}">Events</a>
-            <!-- <a class="m-0" href="">Hobbies</a> -->
             <a class="m-0" href="{%url 'main:contact_view' %}">Contact Me</a>
-            
-            <a style="font-size: 15px; color:brown" href="{% url 'dashboard:dashboard_view' %}">
-                Dashboard
-            </a>
         </div>
     </nav>
 
@@ -44,14 +40,19 @@
     {% endblock %}
     </main>
     
-    <footer class="mt-5">
+    <footer class="mt-5 mb-5">
         <hr/>
-        <section>
-            <div class="left_section">
-
-            </div>
-            <div class="right_section">
-
+        <section class="d-flex flex-column justify-content-center align-items-center gap-2">
+            <a href="{% url 'main:contact_view' %}">
+                <h2 class="faculty_glyphic_h2_title text-center">LET'S GET IN TOUCH</h2>
+            </a>
+            <div class=" mt-2 mb-5 d-flex flex-row justify-content-center align-items-center gap-3">
+                <a href="mailto:osama.binkhunaizan@gmail.com">
+                    <img src="{% static 'images/email.png '%}" width="50px" alt="Email"/>
+                </a>
+                <a href="https://www.linkedin.com/in/osamaalkhunaizan/" target="_blank">
+                    <img src="{% static 'images/linkedin.png '%}" width="50px" alt="LinkedIn"/>
+                </a>
             </div>
         </section>
     </footer>

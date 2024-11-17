@@ -23,7 +23,7 @@
                 <th>Title</th>
                 <th>Category</th>
                 <th>About</th>
-                <!-- <th>Description</th> -->
+                <th>Description</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
@@ -37,7 +37,7 @@
                     <td>{{project.title}} </td>
                     <td>{{project.get_category_display}} </td>
                     <td>{{project.about}} </td>
-                    <!-- <td>{{project.description}} </td> -->
+                    <td>{{project.description}} </td>
                     <td>{{project.created_at}} </td>
                     <td>
                         <a class="mb-2 btn btn-info btn-sm " href="{% url 'dashboard:update_project_view' project.id %}">

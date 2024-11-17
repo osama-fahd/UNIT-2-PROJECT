@@ -7,9 +7,9 @@
 {% load static %}
 
 <div class="main_home faculty_glyphic_home ">
-    <div class="d-flex flex-column align-items-center mb-5">
-        <h1 class="faculty_glyphic_h1 text_shadow">Hi There!</h1>
-        <h1 class="faculty_glyphic_h1 text_shadow">I Am Osama</h1>
+    <div class="move_heading d-flex flex-column align-items-center mb-5">
+        <h1 class="spicy-rice-heading text_shadow">Hi There!</h1>
+        <h1 class="spicy-rice-heading text_shadow">I Am Osama</h1>
     </div>
 
     {% for interest in interests %}
@@ -31,45 +31,46 @@
         </div>
     {% endfor %}
 
-
-    <!-- <div class="d-flex flex-column justify-content-center align-items-center mt-5 background_c home_content">
-        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-5">
-            <div class="text-content col-12 col-lg-5">
-                <p class="">
-                    I’m a web developer who loves working on both the front-end and back-end of websites.
-                    I enjoy creating web applications and designing user-friendly pages
-                    that provide a great experience for visitors.
-                    And making sure my designs work well on all devices.
-                </p>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-lg-start align-items-lg-start col-lg-9 gap-sm-4">
+            <h3 class="spicy-rice-subtitle mb-4 text-start text-sm-center">
+                My Featured Projects
+            </h3>
+            <div class="d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center justify-content-lg-between align-items-lg-baseline gap-sm-5 p-2">
+                {% for project in projects %}
+                <div class="col-9 col-lg-5">
+                    <div class="project project_home_page d-flex flex-column shadow-lg rounded-5 {% if project.id|divisibleby:2 %} project_background_c1 {% else %} project_background_c2 {% endif %}">
+                        <img class="rounded-top-5" src="{{ project.image.url }}"  />
+                        <div class="project_bottom_box p-4">
+                            <a class="text-decoration-none" href="{% url 'resume:project_detail_view' project.id %}">
+                                <h3 class="faculty_glyphic_h2_title text-center">
+                                    {{project.title}}
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
 
-            <div class="image-content  col-12 col-lg-2">
-                <img class="rounded-3 img-fluid" src="{% static 'images/web_d2.png' %}">
-            </div>
         </div>
-        
-        <div class="line"></div>
     </div>
 
-    <div class="d-flex flex-column justify-content-center align-items-center mb-5 background_c2 home_content">
-        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-5">
-            <div class="text-content col-12 col-lg-5">
-                <p class="">
-                    I am also passionate about data science and analysis, particularly in the realm of machine learning applications.
-                    Much of my work focuses on machine learning,
-                     where I delve into data science and analysis to develop intelligent applications.
-                      I enjoy uncovering insights from data and employing algorithms to create impactful,
-                       data-driven solutions.
-                </p>
-            </div>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <a href="{% url 'resume:projects_view'  %}">
+            <h2 class="
+             mt-5 find_more faculty_glyphic_h2_subtitle text-sm-center">Find More!</h2>
+        </a>
+        <div class="mt-0 line align-self-center"></div>
+    </div>
 
-            <div class="image-content  col-12 col-lg-2">
-                <img class="rounded-3 img-fluid" src="{% static 'images/AI_m2.png' %}">
-            </div>
+    <div class="mt-5 background_details d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center col-lg-9 gap-sm-4">
+            <h3 class="spicy-rice-subtitle mb-5 mt-5 text-start text-sm-center">
+                Check Out My Events Page!
+            </h3>
         </div>
-        
-        <div class="line"></div>
-    </div> -->
+    </div>
 
 </div>
 

@@ -17,14 +17,7 @@ body {
     /* color: rgb(90, 68, 39); */
     background-color: #EDF4F2;
     /* color: #31473A; */
-    color: #375242;
-}
-
-.phudu {
-    font-family: "Phudu", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
+    color: #346046;
 }
 
 nav {
@@ -87,12 +80,14 @@ footer {
     padding-right: 40px;
 }
 
-footer section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+footer a:hover {
+    transform: scale(1.05);
 }
+
+footer h2:hover {
+    color:#488a64;
+}
+
 
 .main_home {
     display: flex;
@@ -131,6 +126,33 @@ footer section {
 
 .text_shadow {
     text-shadow: 1.5px 1.5px;
+}
+
+.spicy-rice-regular {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .spicy-rice-subtitle {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-size: 50px;
+    font-style: normal;
+  }
+
+.spicy-rice-title {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-size: 80px;
+    font-style: normal;
+}
+
+.spicy-rice-heading {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-size: 120px;
+    font-style: normal;
 }
 
 .faculty_glyphic {
@@ -174,6 +196,65 @@ footer section {
     /* height: auto;  */
 }
 
+.find_more:hover {
+    color:#488a64;
+    transform: scale(1.05);
+}
+
+@keyframes moveInterestText {
+    0% {
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes moveInterestImage {
+    0% {
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+@keyframes moveHeadingOut {
+    0% {
+        opacity: 0; 
+        transform: scale(0.5); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.2); 
+    }
+}
+
+
+.move_heading h1{
+    opacity: 0; 
+    transform: scale(0.5); 
+    animation: moveHeadingOut 1.2s ease forwards;
+    transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.move_heading:hover {
+    color:#488a64;
+    transform: scale(1.03);
+}
+
+.image-content {
+    opacity: 0; 
+    transform: translateX(100%); 
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards; 
+}
+
 .text-content {
     padding: 1rem; 
     display: flex;
@@ -190,6 +271,7 @@ footer section {
     display: flex; 
     align-items: center; 
     justify-content: center;
+    animation-name: moveInterestImage;
 }
 
 .image-content img {
@@ -204,9 +286,76 @@ footer section {
 .line {
     width: 75%; 
     height: 2px; 
-    background-color: #31473A; 
+    background-color: #3e695088; 
     margin: 20px 0;
 }
+
+.education-content {
+    transition: transform 0.7s ease-in-out, background-color 0.7s ease-in-out, border 0.7s ease-in-out;
+}
+
+.education-content:hover {
+    transform: scale(1.1);
+    background-color: #EDF4F2;
+    border: 6px solid #375242;
+}
+
+.education-content p{
+    line-height: 2; 
+}
+
+.education_title h2, .education_title h3 {
+    transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.education_title h2:hover {
+    color:#488a64;
+    transform: scale(1.03);
+}
+
+.education_title h3:hover {
+    color:#338756;
+    transform: scale(1.09);
+}
+
+.university_section {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    background-image: url("/static/images/university.png");
+    background-repeat: repeat;
+    background-size:auto;
+    background-color: #476f564a;
+}
+
+.skills_part .skills li{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.skills_part h2 {
+    transition: transform 0.3s ease;
+}
+
+.skills_part h3 {
+    transition: transform 0.3s ease;
+}
+
+.skills_part h3:hover {
+    color:#4a7c5f;
+    transform: scale(1.02);
+}
+
+.skills_part h2:hover {
+    color:#38624a;
+    transform: scale(1.02);
+}
+
+.skills {
+    margin-left: 15px;
+}
+
 
 .background_c {
     /* background-color: #d6dcdb; */
@@ -214,20 +363,22 @@ footer section {
 }
 
 .background_c2 {
-    background-color: #6f8b7a51;
+    background-color: #476f5663;
 }
 
-.background_dp {
-    background-color: #6f8b7a51;
+.background_details {
+    background-color: #476f5663;
     width: 100%;
 }
 
 .background_c3 {
-    background-color: #6f8b7a9a;
+    /* background-color: #6f8b7a9a; */
+    background-color: #1f6e3f70;
 }
 
 .background_c4 {
-    background-color: #95a4a0a2;
+    /* background-color: #95a4a0a2; */
+    background-color: #83b2a6a2;
 }
 
 .home_content {
@@ -243,50 +394,63 @@ footer section {
     background-color: #31473A;
 }
 
-.university_section {
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
-    /* border-radius: 90px; */
-    background-image: url("/static/images/university.png");
-    /* background-repeat: no-repeat; */
-    /* box-shadow: 4px 4px 4px #373823; */
-    /* background-color: #fbff92; */
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
 }
 
 .projects_header {
     margin: 0;
-    /* padding: 20px; */
     width: 100%;
     height: 350px;
     background-image: url("/static/images/AI_m3.png");
     background-repeat: repeat-x;
+    animation: moveBackground 1s ease-in-out forwards;
 }
 
-/* .projects_title {
-    background-image: url("/static/images/title_back.png");
-    padding: 40px;
-} */
+.events_header {
+    margin: 0;
+    width: 100%;
+    height: 350px;
+    background-image: url("/static/images/learning.png");
+    background-repeat: repeat-x;
+    animation: moveBackground 1s ease-in-out forwards;
+}
+
+@keyframes moveTextRight {
+    0% {
+        transform: translateX(100%); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+.move_title {
+    animation: moveTextRight 1s ease-in-out forwards;
+    position: relative;
+    opacity: 0;
+}
+
 
 .project_background_c1 {
-    background-color: #6f8b7a9a;
-}
-
-.project_background_c1 p{
-    color: #2e4739dd;
+    background-color: #1f6e3f70;
 }
 
 .project_background_c1 h3:hover {
-    color:#5f6564;
+    color:#4a7c5f;
 }
 
 .project_background_c2 {
-    /* background-color: #95a4a0a2; */
-    background-color: #6f8b7ab7;
-}
-
-.project_background_c2 p {
-    color:#31473add;
+    background-color: #83b2a6a2;
+    /* background-color: #6f8b7ab7; */
 }
 
 .project_background_c2 h3:hover {
@@ -307,10 +471,23 @@ footer section {
     max-height: 700px;
     height: auto; 
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project_home_page {
+
+}
+
+.project_home_page img{
+    height: 500px;
+}
+
+.project_home_page h3{
+    font-size: 40px;
 }
 
 .project p {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 25px;
     line-height: 2;
 }
@@ -332,14 +509,20 @@ footer section {
 .event {
     height: 900px; 
     overflow: hidden;
-    border: 5px solid #375242;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* position: relative; */
+    border: 6px solid #375242;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #70ac7d68;
+}
+
+.event h3:hover {
+    transform: scale(1.02); 
+    color:#4a7c5f;
 }
 
 .event:hover {
     transform: scale(1.02); 
-    box-shadow: 8px 8px #578468;
+    box-shadow: 9px 9px #578468;
+    background-color: #EDF4F2;
 }
 
 .event img {
@@ -357,10 +540,6 @@ footer section {
     font-weight: 500;
     font-size: 21px;
     line-height: 2;
-}
-
-.detail {
-
 }
 
 .faculty_glyphic_h3_title{
@@ -435,11 +614,6 @@ footer section {
     background-color: #EDF4F2;
 }
 
-
-.detail_project {
-
-}
-
 .detail_project img {
     height: 600px;
     transition: transform 0.5s ease;
@@ -447,13 +621,33 @@ footer section {
 }
 
 .project_bottom_box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+    /* background-color: #EDF4F2; */
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 33px;
+}
+
+.project_bottom_box:hover {
+    transform: scale(1.02); 
     border: 6px solid #375242;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    background-color: #EDF4F2;
-    border-radius: 13px;
+    box-shadow: -7px 7px #578468;
+    background-color: #edf4f2;
+    color: #31473A;
+}
+
+.project:hover img{
+    transform: scale(0.98); 
+}
+
+.project img:hover{
+    transform: scale(1); 
 }
 
 @media (max-width: 992px) {
+
+    .spicy-rice-heading {
+        font-size: 85px;
+    }
 
     .event {
         height: auto; 
