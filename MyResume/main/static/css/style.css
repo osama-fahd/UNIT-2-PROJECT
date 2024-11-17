@@ -54,6 +54,12 @@ nav div a {
     font-size: 20px;
 }
 
+nav a:hover {
+    transform: scale(1.05);
+    color:#488a64;
+
+}
+
 a {
     text-decoration: none;
     color: #375242;
@@ -88,6 +94,22 @@ footer h2:hover {
     color:#488a64;
 }
 
+.typing {
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
 
 .main_home {
     display: flex;
@@ -197,6 +219,11 @@ footer h2:hover {
 }
 
 .find_more:hover {
+    color:#488a64;
+    transform: scale(1.05);
+}
+
+.hover_events:hover {
     color:#488a64;
     transform: scale(1.05);
 }
