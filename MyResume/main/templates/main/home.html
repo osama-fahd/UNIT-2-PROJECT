@@ -14,7 +14,7 @@
 
     {% for interest in interests %}
         <div class="home_content d-flex flex-column justify-content-center align-items-center 
-        {% if interest.id|divisibleby:2 %} background_c {% else %} background_c2 {% endif %}">
+        {% if interest.id|divisibleby:2 %} background_c2 {% else %} background_c {% endif %}">
             <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-2 gap-lg-5">
                 <div class="text-content col-12 col-lg-5">
                     <p class="">
@@ -31,7 +31,7 @@
         </div>
     {% endfor %}
 
-    <div class="d-flex flex-column justify-content-center align-items-center">
+    <div class="mt-5 d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-lg-start align-items-lg-start col-lg-9 gap-sm-4">
             <h3 class="spicy-rice-subtitle mb-4 text-start text-sm-center">
                 My Featured Projects
@@ -56,15 +56,15 @@
         </div>
     </div>
 
-    <div class="d-flex flex-column justify-content-center align-items-center">
+    <!-- <div class="d-flex flex-column justify-content-center align-items-center">
         <a href="{% url 'resume:projects_view'  %}">
             <h2 class="
              mt-5 find_more faculty_glyphic_h2_subtitle text-sm-center">Find More!</h2>
         </a>
         <div class="mt-0 line align-self-center"></div>
-    </div>
+    </div> -->
 
-    <div class="mt-5 background_details d-flex flex-column justify-content-center align-items-center">
+    <!-- <div class="mt-5 background_details d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center col-lg-9 gap-sm-4">
             <a href="{% url 'resume:events_view'  %}">    
                 <h3 class="hover_events spicy-rice-subtitle mb-5 mt-5 text-start text-sm-center">
@@ -72,7 +72,7 @@
                 </h3>
             </a>
         </div>
-    </div>
+    </div> -->
 
 </div>
 

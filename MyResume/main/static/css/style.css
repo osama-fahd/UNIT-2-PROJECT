@@ -322,13 +322,15 @@ footer h2:hover {
 }
 
 .education-content:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
     background-color: #EDF4F2;
     border: 6px solid #375242;
+    text-align:start
 }
 
 .education-content p{
     line-height: 2; 
+    text-align: justify;
 }
 
 .education_title h2, .education_title h3 {
@@ -673,7 +675,15 @@ footer h2:hover {
 @media (max-width: 992px) {
 
     .spicy-rice-heading {
-        font-size: 85px;
+        font-size: 80px;
+    }
+
+    .spicy-rice-subtitle {
+        font-size: 45px;
+    }
+
+    .spicy-rice-title {
+        font-size: 60px;
     }
 
     .event {
@@ -689,11 +699,26 @@ footer h2:hover {
     }
 
     .faculty_glyphic_h2_title {
-        font-size: 35px;
+        font-size: 33px;
     }
 
     .faculty_glyphic_h2 {
+        font-size: 50px;
+        line-height: 1.5;
         text-align: center;
+        margin-bottom: 0;
+    }
+
+    .faculty_glyphic_h2_subtitle {
+        font-size: 30px;
+    }
+
+    .faculty_glyphic_h3_subtitle {
+        font-size: 20px;
+    }
+
+    .education-content p {
+        font-size: 20px;
     }
 
     .project p {
