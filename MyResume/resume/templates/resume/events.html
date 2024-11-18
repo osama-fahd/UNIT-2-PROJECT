@@ -36,3 +36,40 @@
 </div>
 
 {% endblock %}
+
+project.html:
+{% extends 'main/base.html' %}
+
+{% block title %} Osama's Projects {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="main_projects ">
+    <div class="projects_header col-12"></div>
+    
+    <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+        <h2 class="mt-5 mb-2 spicy-rice-title move_title text-center">My Projects</h2>
+
+        {% for project in projects %}
+            <div class="col-9 col-lg-6">
+                <div class="project d-flex flex-column justify-content-start shadow-lg rounded-5 {% if project.id|divisibleby:2 %} project_background_c1 {% else %} project_background_c2 {% endif %}">
+                    <img class="rounded-top-5" src="{{ project.image.url }}"  />
+                    <div class="project_bottom_box p-5">
+                        <a class="text-decoration-none" href="{% url 'resume:project_detail_view' project.id %}">
+                            <h3 class="faculty_glyphic_h2_title mb-4">
+                                {{project.title}}
+                            </h3>
+                        </a>
+                        <p class="">
+                            {{project.about}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
