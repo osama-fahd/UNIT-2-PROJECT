@@ -34,32 +34,30 @@
         </div>
     </nav>
 
-    <main class="container">
+    <main>
     {% block content %}
 
     {% endblock %}
     </main>
     
-    <div class="container">
-        <footer class="mt-5 col ">
-            <hr/>
-            <section class="d-flex flex-column justify-content-center align-items-center gap-2">
-                <a href="{% url 'main:contact_view' %}">
-                    <h2 class="faculty_glyphic_h2_title text-center">LET'S GET IN TOUCH</h2>
+    <footer class="mt-5 mb-5">
+        <hr/>
+        <section class="d-flex flex-column justify-content-center align-items-center gap-2">
+            <a href="{% url 'main:contact_view' %}">
+                <h2 class="faculty_glyphic_h2_title text-center">LET'S GET IN TOUCH</h2>
+            </a>
+            <div class=" mt-2 mb-5 d-flex flex-row justify-content-center align-items-center gap-3">
+                <a href="mailto:osama.binkhunaizan@gmail.com">
+                    <img src="{% static 'images/email.png '%}" width="50px" alt="Email"/>
                 </a>
-                <div class=" mt-2 mb-5 d-flex flex-row justify-content-center align-items-center gap-3">
-                    <a href="mailto:osama.binkhunaizan@gmail.com">
-                        <img src="{% static 'images/email.png '%}" width="50px" alt="Email"/>
-                    </a>
-                    <a href="https://www.linkedin.com/in/osamaalkhunaizan/" target="_blank">
-                        <img src="{% static 'images/linkedin.png '%}" width="50px" alt="LinkedIn"/>
-                    </a>
-                    <a href="https://github.com/osama-fahd" target="_blank">
-                        <img src="{% static 'images/github.png '%}" width="50px" alt="Github"/>
-                    </a>
-                </div>
-            </section>
-        </footer>
-    </div>
+                <a href="https://www.linkedin.com/in/osamaalkhunaizan/" target="_blank">
+                    <img src="{% static 'images/linkedin.png '%}" width="50px" alt="LinkedIn"/>
+                </a>
+                <a href="https://github.com/osama-fahd" target="_blank">
+                    <img src="{% static 'images/github.png '%}" width="50px" alt="Github"/>
+                </a>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
