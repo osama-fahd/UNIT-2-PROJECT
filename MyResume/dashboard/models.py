@@ -22,6 +22,9 @@ class Project(models.Model):
 
     created_at = models.DateTimeField(auto_now=True)
     
+    def __str__(self) -> str:
+        return self.title
+    
 
 class Course(models.Model):
     class Category(models.TextChoices):
@@ -46,6 +49,9 @@ class Course(models.Model):
 
     created_at = models.DateTimeField(auto_now=True)
     
+    def __str__(self) -> str:
+        return self.title
+    
     
 class Interest(models.Model):
     
@@ -53,4 +59,7 @@ class Interest(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to="images/")
     created_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self) -> str:
+        return self.title
     
